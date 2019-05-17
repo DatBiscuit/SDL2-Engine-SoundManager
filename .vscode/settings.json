@@ -1,0 +1,126 @@
+{
+    "editor.tokenColorCustomizations": {
+        "[Plastic]": {
+            "functions": "#98C379",
+            "textMateRules": [
+                {
+                    "scope": "constant",
+                    "settings": {
+                        "foreground": "#a889ff"
+                    }
+                },
+                {
+                    "scope": "storage.modifier",
+                    "settings": {
+                        "foreground": "#a3528f"
+                    }
+                },
+                {
+                    "scope": "storage.type",
+                    "settings": {
+                        "foreground": "#e4a7df"
+                    }
+                },
+                {
+                    "scope": "entity.scope.name.cpp",
+                    "settings": {
+                        "foreground": "#E5C07B"
+                    }
+                 },
+                {
+                    "scope": [
+                        "punctuation.definition.directive",
+                        "keyword.control.directive.include",
+                        "keyword.control.directive.pragma",
+                        "entity.other.attribute-name.pragma.preprocessor"
+                    ],
+                    "settings": {
+                        "foreground": "#267386"
+                    }
+                },
+                {
+                    "scope": [
+                        "string.quoted.other.lt-gt.include",
+                        "string.quoted.double.include"
+                    ],
+                    "settings": {
+                        "foreground": "#4ca5bb"
+                    }
+                },
+                {
+                    "scope": "variable.other.makefile",
+                    "settings": {
+                        "foreground": "#D19A66"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double",
+                    "settings": {
+                        "foreground": "#c0917c",
+                        "fontStyle": "italic"
+                    }
+                }, 
+                {
+                    "scope": [
+                        "punctuation.separator.namespace.access",
+                        "punctuation.separator.pointer-access",
+                        "punctuation.separator.dot-access"
+                    ],
+                    "settings": {
+                        "foreground": "#E06C75"
+                    }
+                },
+                {
+                    "scope": [
+                        "variable.other",
+                        "variable.other.member",
+                        "variable.parameter.probably.cpp",
+                        "variable.object.cpp"
+                    ],
+                    "settings": {
+                        "foreground": "#a9b2c3ff"
+                    }
+                }
+            ]
+        }
+    },
+    "files.associations": {
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "fstream": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "forward_list": "cpp",
+        "cmath": "cpp",
+        "list": "cpp",
+        "deque": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
