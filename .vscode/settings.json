@@ -120,7 +120,15 @@
         "forward_list": "cpp",
         "cmath": "cpp",
         "list": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "atomic": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "algorithm": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "string": "cpp",
+        "cinttypes": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
