@@ -87,12 +87,10 @@ int main(int argc, char *args[])
 	//SDL specific members
 	SDL_Event e;
 
-	soundManager.playSound("medium", 20);
-
 	while (inGame)
 	{
 		loops = 0;
-		//soundManager.playMusic("beat");
+		soundManager.playMusic("beat");
 		while (SDL_GetTicks() > next_game_tick && loops < MAX_FRAME_SKIP)
 		{
 			next_game_tick += FRAMES_TO_SKIP;
