@@ -4,35 +4,56 @@
 #include <iostream>
 #include <map>
 #include <fstream>
+#include <vector>
+#include "AudioObject.h"
+#include <string>
+#include <cmath>
 
 class SoundManager {
 
 public:
 
-    std::string soundDir = "../sounds/";
-    std::string musicDir = "../music/";
-    std::string fileFormat = ".wav";
+        SoundManager();
+        ~SoundManager();
 
-    std::map<std::string, Mix_Music*> MusicMap;
-    std::map<std::string, Mix_Chunk*> SoundMap;
+        void GenerateSamples(Uint8* streamIn, int streamInLen);
+        void PlayAudio(AudioObject& ao);
+        void PauseAudio(AudioObject& ao);
+        void StopAudio(AudioObject& ao);
+        void playMusic();
+
+       SDL_AudioSpec wavSpec;
+       Uint8* wavStart;
+       Uint32 wavLength;
+
+       //SDL_AudioDeviceID device;
+    //    AudioData audio;
+
+        // void MyAudioCallback(void* userdata, Uint8* stream, int streamLength);
+
+       AudioObject* CreateAudioFromFile(const std::string& filePath);
+
+       void ReleaseAudio(AudioObject* audioData);
+       
+    //    bool loadwav();
+    //    void freewav();
+    //    bool createdevice();
+    //    void closedevice();
 
 
-    // //The sound effects that will be used
-    // Mix_Chunk *gScratch = NULL;
-    // Mix_Chunk *gHigh = NULL;
-    // Mix_Chunk *gMedium = NULL;
-    // Mix_Chunk *gLow = NULL;
 
-    SoundManager();
-    ~SoundManager();
-    bool Init();
-    bool InitMusic();
-    bool InitSound();
-    void playMusic(std::string songName);
-    void playSound(std::string soundName, int loops);
-    void stopMusic();
-    void pauseMusic();
-    void resumeMusic();
+
+
+private:
+    SDL_AudioDeviceID m_device;
+    std::vector<float> m_stream;
+    std::vector<AudioObject*> m_playingAudio; //list of audio currently being played
+
+    bool RemoveAudio(AudioObject& ao);
+
+    SoundManager(SoundManager& other) { (void)other; }
+    void operator=(const SoundManager& other) { (void)other; }
+
 
 };
 
